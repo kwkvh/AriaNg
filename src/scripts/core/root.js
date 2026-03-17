@@ -345,6 +345,10 @@
                 return true;
             }
 
+            if (task.singleUrl.search($rootScope.searchContext.text)) {
+                return true;
+            }
+
             return (task.taskName.toLowerCase().indexOf($rootScope.searchContext.text.toLowerCase()) >= 0);
         };
 
